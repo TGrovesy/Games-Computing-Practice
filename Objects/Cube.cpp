@@ -1,8 +1,9 @@
 #include "Cube.h"
 #include<of3dGraphics.h>
 
-Cube::Cube(glm::vec3 position, glm::vec3 scale) : position(position), scale(scale) {
-
+Cube::Cube(glm::vec3 position, glm::vec3 scale) : Object() {
+	this->position = position;
+	this->scale = scale;
 }
 
 Cube::~Cube() {
@@ -10,7 +11,6 @@ Cube::~Cube() {
 }
 
 void Cube::Draw() {
-	
 	ofDrawBox(this->position, this->scale.x, this->scale.y, this->scale.z);
 }
 
